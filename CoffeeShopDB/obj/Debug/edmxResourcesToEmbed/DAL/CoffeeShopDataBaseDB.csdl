@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CoffeeShopDataBaseDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="CoffeeShopDataBaseDBContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="CoffeeShopDataBaseDB.Customer" />
+    <EntitySet Name="Coffees" EntityType="CoffeeShopDataBaseDB.Coffee" />
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" Nullable="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" />
+    <Property Name="DOB" Type="String" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="FavoriteCoffee" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Coffee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Condition" Type="String" Nullable="false" />
+    <Property Name="Quantity" Type="String" Nullable="false" />
+    <Property Name="Origin" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>
